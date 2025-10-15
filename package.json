@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "server.ts",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "nodemon",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/server.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "format": "prettier --write .",
@@ -15,16 +17,20 @@
   "description": "",
   "devDependencies": {
     "@eslint/js": "^9.37.0",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^24.7.2",
     "eslint": "^9.37.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
+    "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.16",
+    "tsconfig-paths": "^4.2.0",
     "typescript-eslint": "^8.46.1"
   },
   "dependencies": {
-    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "zod": "^4.1.12"

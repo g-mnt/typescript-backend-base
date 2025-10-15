@@ -1,5 +1,4 @@
 import { env } from '@config/env';
-
 import { app } from './app';
 
 const server = app.listen(env.port, () => {
